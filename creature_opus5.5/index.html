@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Halcyon</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='20' r='6' fill='%23ff6a5a'/><path d='M16 2 L17 14 L15 14Z' fill='%23141626'/></svg>" />
+</head>
+<body>
+  <canvas id="view"></canvas>
+  <div id="ui">
+    <div id="flash"></div>
+    <div id="vignette-hurt"></div>
+
+    <div id="hud" class="hidden">
+      <div id="player-panel">
+        <div class="bar" id="hp-bar"><div class="chip"></div><div class="fill"></div></div>
+        <div id="flasks"></div>
+      </div>
+      <div id="boss-panel" class="hidden">
+        <div id="boss-name">HALCYON<span>Warden of the Still Water</span></div>
+        <div class="bar" id="boss-bar"><div class="chip"></div><div class="fill"></div><div class="tick"></div></div>
+      </div>
+      <div id="lock-hint"></div>
+    </div>
+
+    <div id="namecard" class="hidden">
+      <div class="nc-line"></div>
+      <div class="nc-title">HALCYON</div>
+      <div class="nc-sub">Warden of the Still Water</div>
+      <div class="nc-line"></div>
+    </div>
+
+    <div id="title" class="screen">
+      <div class="t-kicker">a duel on the still water</div>
+      <h1>HALCYON</h1>
+      <div class="t-prompt" id="t-prompt">loading the salt flat&hellip;</div>
+      <div class="t-controls">
+        <div><b>WASD</b> move</div>
+        <div><b>Mouse / J</b> strike</div>
+        <div><b>Space / K</b> skim (dodge)</div>
+        <div><b>R</b> drink the still water</div>
+        <div><b>Tab / Q</b> lock view</div>
+        <div><b>Gamepad</b> supported</div>
+      </div>
+    </div>
+
+    <div id="death" class="screen hidden">
+      <h2>THE WATER CLOSES</h2>
+      <div class="t-prompt">press any key to rise again</div>
+    </div>
+
+    <div id="victory" class="screen hidden">
+      <div class="t-kicker">the lantern goes out</div>
+      <h2>HALCYON STILLED</h2>
+      <div class="v-stats" id="v-stats"></div>
+      <div class="t-prompt">press any key to wade in again</div>
+    </div>
+
+    <div id="debug" class="hidden"></div>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

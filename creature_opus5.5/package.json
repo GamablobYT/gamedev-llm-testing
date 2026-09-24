@@ -1,0 +1,24 @@
+{
+  "name": "halcyon",
+  "version": "0.1.0",
+  "description": "HALCYON: a vertical-slice boss fight on a flooded salt mirror.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "assets": "npm run assets:halcyon && npm run assets:pilgrim && npm run assets:arena",
+    "assets:halcyon": "blender -b --factory-startup --python blender/build_halcyon.py -- anims export",
+    "assets:pilgrim": "blender -b --factory-startup --python blender/build_player.py -- export",
+    "assets:arena": "blender -b --factory-startup --python blender/build_arena.py"
+  },
+  "dependencies": {
+    "@fontsource/cormorant-garamond": "^5.3.0",
+    "@fontsource/inter": "^5.3.0",
+    "three": "^0.186.0"
+  },
+  "devDependencies": {
+    "vite": "^8.3.0"
+  }
+}
